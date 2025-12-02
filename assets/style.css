@@ -1,0 +1,32 @@
+
+:root{
+  --bg:#0b0d12;--panel:#11151c;--text:#e9eef6;--muted:#a8b3c1;
+  --brand:#7ac4ff;--brand2:#00d4a6;--border:#1b2230;
+}
+*{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+a{color:var(--brand);text-decoration:none} a:hover{opacity:.9}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.nav{position:sticky;top:0;background:rgba(11,13,18,.75);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:40}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand2))}
+.brand{display:flex;align-items:center;gap:10px}
+.brand h1{font-size:18px;margin:0}
+.navlinks{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:8px 12px;border:1px solid var(--border);border-radius:12px;background:linear-gradient(180deg,#161b24,#10151d)}
+.kicker{font-size:12px;letter-spacing:.22em;color:#9fd; text-transform:uppercase}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:center;margin-top:18px}
+.hero h2{font-size:36px;margin:6px 0 10px}
+.hero p{color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0}
+.footer{border-top:1px solid var(--border);color:var(--muted);padding:16px 0;margin-top:30px}
+.article{max-width:840px;margin:0 auto}
+.article h1{font-size:32px;margin:12px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin-bottom:14px}
+.toc{background:var(--panel);border:1px dashed var(--border);padding:12px;border-radius:12px;margin:16px 0}
+.md h1{font-size:28px} .md h2{font-size:24px;margin-top:18px}
+.md pre{background:#0f1320;border:1px solid #1c2636;border-radius:10px;padding:12px;overflow:auto}
+.md code{font-family:ui-monospace,Consolas,Menlo,monospace}
+.table{width:100%;border-collapse:collapse;border:1px solid var(--border)}
+.table th,.table td{border:1px solid var(--border);padding:8px;text-align:left}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.navlinks{display:none}}

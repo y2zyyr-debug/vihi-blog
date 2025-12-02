@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Post – Vihi Coffee</title>
+<meta name="description" content="Article">
+<link rel="canonical" href="https://blog.vihi.design/post.html">
+<link rel="icon" href="/assets/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Post – Vihi Coffee">
+<meta property="og:description" content="Article">
+<meta property="og:image" content="https://blog.vihi.design/assets/og.png">
+<meta property="og:url" content="https://blog.vihi.design/post.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Vihi Coffee", "url": "https://blog.vihi.design/", "logo": "https://blog.vihi.design/assets/logo.png", "sameAs": ["https://www.vihi.design/"]}</script>
+
+</head><body>
+<div class="nav"><div class="container nav-inner">
+  <div class="brand"><div class="logo"></div><h1>Vihi Coffee</h1></div>
+  <div class="navlinks">
+    <a class="btn" href="/">Home</a>
+    <a class="btn" href="/vfold.html">V-Fold</a>
+    <a class="btn" href="/gflow.html">G-Flow</a>
+    <a class="btn" href="/wave.html">Wave Filters</a>
+    <a class="btn" href="/knowledge.html">Knowledge</a>
+    <a class="btn" href="/posts.html">Posts</a>
+  </div>
+</div></div>
+
+<div class="container"><div class="article">
+  <div class="kicker">Vihi Coffee · R&D Notes</div>
+  <h1 id="title"></h1>
+  <div class="meta" id="meta"></div>
+  <div class="md" id="md"></div>
+</div></div>
+<div class="footer container">© 2025 Vihi Design Co., Ltd. · Jiangmen · Enping · Guangdong · <a href="https://www.vihi.design" target="_blank" rel="noopener">vihi.design</a></div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+function qs(k){ return new URLSearchParams(location.search).get(k) }
+const slug = qs('slug');
+fetch('/content/index.json').then(r=>r.json()).then(db=>{
+  const post = db.posts.find(p=>p.slug===slug);
+  if(!post){ document.getElementById('md').innerHTML='Not found.'; return; }
+  document.title = post.title + ' – Vihi Coffee';
+  document.getElementById('title').textContent = post.title;
+  document.getElementById('meta').textContent = post.date + ' · ' + post.description;
+  fetch('/content/'+slug+'.md').then(r=>r.text()).then(md=>{
+    document.getElementById('md').innerHTML = marked.parse(md);
+  });
+});
+</script>
+</body></html>

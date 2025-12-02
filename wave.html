@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wave Filter Science – Vihi Coffee</title>
+<meta name="description" content="Geometry, crease pitch, thickness, and hydraulic resistance.">
+<link rel="canonical" href="https://blog.vihi.design/wave.html">
+<link rel="icon" href="/assets/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wave Filter Science – Vihi Coffee">
+<meta property="og:description" content="Geometry, crease pitch, thickness, and hydraulic resistance.">
+<meta property="og:image" content="https://blog.vihi.design/assets/og.png">
+<meta property="og:url" content="https://blog.vihi.design/wave.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Vihi Coffee", "url": "https://blog.vihi.design/", "logo": "https://blog.vihi.design/assets/logo.png", "sameAs": ["https://www.vihi.design/"]}</script>
+
+</head><body>
+<div class="nav"><div class="container nav-inner">
+  <div class="brand"><div class="logo"></div><h1>Vihi Coffee</h1></div>
+  <div class="navlinks">
+    <a class="btn" href="/">Home</a>
+    <a class="btn" href="/vfold.html">V-Fold</a>
+    <a class="btn" href="/gflow.html">G-Flow</a>
+    <a class="btn" href="/wave.html">Wave Filters</a>
+    <a class="btn" href="/knowledge.html">Knowledge</a>
+    <a class="btn" href="/posts.html">Posts</a>
+  </div>
+</div></div>
+
+<div class="container"><div class="article">
+  <h1>Wave Filter Science</h1><p class="meta">Geometry, crease pitch, thickness, and hydraulic resistance.</p>
+  <div id="list"></div>
+</div></div>
+<div class="footer container">© 2025 Vihi Design Co., Ltd. · Jiangmen · Enping · Guangdong · <a href="https://www.vihi.design" target="_blank" rel="noopener">vihi.design</a></div>
+<script>
+// render posts by tag
+fetch('/content/index.json').then(r=>r.json()).then(data=>{
+  const posts = data.posts.filter(p=>p.tags && p.tags.includes('wave'));
+  const el = document.getElementById('list');
+  el.innerHTML = posts.map(p => `<div class="card" style="margin:12px 0;">
+    <h3><a href="/post.html?slug=${p.slug}">${p.title}</a></h3>
+    <div class="meta">${p.date} · ${p.description}</div>
+  </div>`).join('');
+});
+</script>
+</body></html>

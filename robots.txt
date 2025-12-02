@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://blog.vihi.design/sitemap.xml

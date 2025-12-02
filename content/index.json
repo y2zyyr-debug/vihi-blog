@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "slug": "vfold-intro",
+      "title": "V\u2011Fold Intro",
+      "description": "Why reshaping wave paper improves seat and symmetry.",
+      "date": "2025-12-02",
+      "tags": [
+        "vfold",
+        "knowledge"
+      ]
+    },
+    {
+      "slug": "gflow-intro",
+      "title": "G\u2011Flow Intro",
+      "description": "Guided flow insert for stable percolation.",
+      "date": "2025-12-02",
+      "tags": [
+        "gflow",
+        "knowledge"
+      ]
+    },
+    {
+      "slug": "wave-geometry",
+      "title": "Wave Geometry & Extraction",
+      "description": "How crest pitch, height and thickness alter resistance.",
+      "date": "2025-12-02",
+      "tags": [
+        "wave",
+        "knowledge"
+      ]
+    },
+    {
+      "slug": "vfold-steps",
+      "title": "V\u2011Fold: Step\u2011by\u2011Step",
+      "description": "30\u2011second reshaping workflow.",
+      "date": "2025-12-02",
+      "tags": [
+        "vfold"
+      ]
+    },
+    {
+      "slug": "gflow-calibration",
+      "title": "G\u2011Flow Calibration",
+      "description": "Dial in with reference curve.",
+      "date": "2025-12-02",
+      "tags": [
+        "gflow"
+      ]
+    }
+  ]
+}
